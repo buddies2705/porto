@@ -4,7 +4,7 @@
 			<title>Gaurav</title>
 			<link rel="stylesheet" type="text/css" href="animate.css">
 			<link rel="stylesheet" type="text/css" href="mstyle.css">
-			<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
 
 			<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,7 +12,7 @@
 		</head>
 		<body>
 			<div>
-				<img class= "mimage img-circle"  id = "img" src="myimage.jpg">
+				<img class= "bg"  src="bg.gif">
 			</div>
 
 			<!-- <div>
@@ -25,8 +25,8 @@
 			<div>
 
 			</div>
-			<div id='quote' class="quote">reality is merely an illusion albeit a very persistent one</div>
-			<div id='author' class="quote">albert einstein</div>
+			<div id='quote' class="quote ">reality is merely an illusion albeit a very persistent one</div>
+			<div id='author' class="quote ">albert einstein</div>
 			<div id="fb">
 			<p>
 				<a target="_blank" href="https://www.facebook.com/gaurav.agrawal.96780671">
@@ -44,7 +44,7 @@
 			<div id="git">
 				<p>
 				<a target="_blank" href="https://github.com/buddies2705">
-				<img src="github.svg" width="30" height="30" border="0">
+				<img src="github.svg" width="30" height="29" border="0">
 				</a>
 			</p>
 			</div>
@@ -60,7 +60,7 @@
 				});
 
 				function infinite() {
-					setInterval(ajaxcall, 10000);
+					setInterval(ajaxcall, 9000);
 				}
 
 
@@ -76,15 +76,21 @@
 						dataType: 'json',
 						async:false,
 						success: function(data) {
-							$("#quote").html(data.quote);
-							$("#author").html(data.author)
+							$('#quote').fadeOut(2000, function() {
+   							$('#quote').html(data.quote);
+    						$('#quote').fadeIn(2000);
+							});
+							$('#author').fadeOut(2000, function() {
+   							$('#author').html(data.author);
+    						$('#author').fadeIn(2000);
+							});
+							
 						}
 					})
 				}
 
 
-
-
+				
 
 
 			</script>
