@@ -1,0 +1,53 @@
+.mimage{
+	width: 100px;
+	height: 100px;
+	shape-rendering: 
+}
+
+body {
+    background-image: url("bg3.jpg");
+  background-size: cover;
+}
+
+.img-circle {
+    border-radius: 20%;
+}
+
+
+
+#fb {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#git {
+    position: absolute;
+    top:5px;
+    right: 40px;
+}
+
+
+#linkedin {
+    position: absolute;
+    top:5px;
+    right: 80px;
+}
+
+.quote{
+	font-family: 'Indie Flower', cursive;
+	font-size: 270%;
+
+}
+
+#quote{
+	text-align: center;
+	position: relative;
+	color: white;
+}
+
+#author{
+	position: relative;
+	text-align: center;
+	color: white;
+}
