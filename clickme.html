@@ -15,12 +15,14 @@
 		<div id= "maincontent">
 		<h2 id="msg">I am not easy to get , Catch me and i'll show kfc girls !</h2>
 		<a href='javascript:;' class="myButton" onclick="start();" id ="ca">Let's start ...</a>	
-		<a href="kfc/1.jpg" rel="prettyPhoto" title="Click Me!" id="clickanchor"><img src="ctm.jpg" alt="Your Prize" class="img-circle" id="clickmeimage" onclick="stop();"></a>
+		<a href="#" rel="prettyPhoto" title="Click Me!" id="clickanchor"><img src="ctm.jpg" alt="Your Prize" class="img-circle" id="clickmeimage" onclick="stop();"></a>
 		</div>
 		<script type="text/javascript">
 			var count =0;
 			$(document).ready(function(){
-			$("a[rel^='prettyPhoto']").prettyPhoto();
+			// $("a[rel^='prettyPhoto']").prettyPhoto();
+			$("#clickmeimage").off('click')
+			$("#clickanchor").off('click')
 			});
 
 			function generateRandom(min , max) {
@@ -32,13 +34,13 @@
    				 $("#clickmeimage").last().css({"position":"absolute","top": top + "px", "left": left + "px"});
 			}
 			function start(){
+				$("a[rel^='prettyPhoto']").prettyPhoto();
 				count =0;
 				$("#ca").hide();
 				$("#msg").hide();
-
 				 $(document).click(function() {
    						 count++});
-				interval = setInterval(randomi,800);
+				interval = setInterval(randomi,2000);
 			}
 			function stop() {
 				clearInterval(interval);
@@ -47,9 +49,13 @@
 				$('#clickanchor').prop('title', 'Number of Clicks : ' + count);
 				// $('#clickanchor').find('*').css('font-family': 'Playball');	
 				$("#clickanchor").attr("href", function(){return "kfc/" + generateRandom(1,12) +".jpg" })
+				$(document).click(function() {
+					location.reload();
+				});
 
 			}
 
+		
 		</script>
 		</body>
 		</html></>				
