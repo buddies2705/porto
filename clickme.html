@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+		<html>
+		<head>
+			<title>Gaurav</title>
+			<link rel="stylesheet" type="text/css" href="ctm.css">
+			<link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+			<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+		<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+		</head>
+		<body>
+		<div id= "maincontent">
+		<h2 id="msg">I am not easy to get , Catch me and i'll show kfc girls !</h2>
+		<a href='javascript:;' class="myButton" onclick="start();" id ="ca">Challenge Accepted ?</a>	
+		<a href="kfc/1.jpg" rel="prettyPhoto" title="Click Me!" id="clickanchor"><img src="ctm.jpg" alt="Your Prize" class="img-circle" id="clickmeimage" onclick="stop();"></a>
+		</div>
+		<script type="text/javascript">
+			var count =0;
+			$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+			});
+
+			function generateRandom(min , max) {
+   				 return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			function randomi() {
+    			var left = generateRandom(100,1200);
+    			var top = generateRandom(100,600);
+   				 $("#clickmeimage").last().css({"position":"absolute","top": top + "px", "left": left + "px"});
+			}
+			function start(){
+				count =0;
+				$("#ca").hide();
+				$("#msg").hide();
+
+				 $(document).click(function() {
+   						 count++});
+				interval = setInterval(randomi,800);
+			}
+			function stop() {
+				clearInterval(interval);
+				$("#ca").show();
+				$("#msg").show();
+				$('#clickanchor').prop('title', 'Number of Clicks : ' + count);
+				// $('#clickanchor').find('*').css('font-family': 'Playball');	
+				$("#clickanchor").attr("href", function(){return "kfc/" + generateRandom(1,12) +".jpg" })
+
+			}
+
+		</script>
+		</body>
+		</html></>				
