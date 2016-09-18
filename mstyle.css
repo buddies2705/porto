@@ -55,7 +55,7 @@ img.bg {
 #linkedin {
     position: absolute;
     top:5px;
-    right: 80px;
+    right: 40px;
 }
 
 .quote{
@@ -80,4 +80,10 @@ font-family: 'Ubuntu Condensed', sans-serif;
 #git{
 	background:darkcyan;
 	height: 29px;
+}
+
+#clickgameimg{
+ position: absolute;
+    top:5px;
+    left: 20px;
 }
