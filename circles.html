@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+				<link rel="stylesheet" type="text/css" href="../css/circles.css">
+
+</head>
+<body>
+<h5 id ="msg">Hold mouse and draw Or double click and draw </h5>
+<a id="dl" download="Canvas.png" href="#">Save it!</a>
+<!-- AddToAny BEGIN -->
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.plugin.html2canvas.js"></script> -->
+<script src="../js/p5.min.js"></script>
+<script src="../js/reimg.js"></script>
+
+<script src="../js/sketch.js"></script>
+<script type="text/javascript">
+ document.getElementById("dl").addEventListener('click', downloadCanvas, false);
+function downloadCanvas(e){
+            	$('#screenshot').hide();
+                e.preventDefault();
+                html2canvas($('body'), {
+                    onrendered: function(canvas){
+                        ReImg.fromCanvas(canvas).downloadPng();                      
+                    }
+                });
+            }
+
+</script>
+</body>
+</html>
