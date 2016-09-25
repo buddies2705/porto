@@ -87,3 +87,8 @@ font-family: 'Ubuntu Condensed', sans-serif;
     top:5px;
     left: 20px;
 }
+#circlesimg{
+ position: absolute;
+    top:5px;
+    left: 70px;
+}
