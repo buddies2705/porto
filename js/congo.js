@@ -2,7 +2,7 @@
 var c = function( p ) {
 var fr = 10; //starting FPS
 var sp = 120;
-var ep = 380; // end point
+var ep = 390; // end point
 var v0 = 5;
 var v = v0; //congo velocity
 var a = 9.0; // acceleration
@@ -46,7 +46,7 @@ new p5(c,"congo");
 var s = function(p) {
 var fr = 10; 
 var sp = 120;
-var ep = 380; 
+var ep = 390; 
 var v0 = 5;
 var v = v0; 
 var a = 9.0; 
@@ -90,7 +90,7 @@ new p5(s , "floortom");
 var a = function(p) {
 var fr = 10; 
 var sp = 120;
-var ep = 380; 
+var ep = 390; 
 var v0 = 5;
 var v = v0; 
 var a = 9.0; 
@@ -137,7 +137,7 @@ new p5(a , "bassdrum");
 var b = function(p){
 var fr = 10; 
 var sp = 120;
-var ep = 380;
+var ep = 400;
 var v0 = 5;
 var v = v0; 
 var a = 9.0;
@@ -183,7 +183,7 @@ new p5(b , "snare");
 var d = function(p){
 var fr = 10;
 var sp = 120;
-var ep = 380;
+var ep = 400;
 var v0 = 5;
 var v = v0; 
 var floortom_v = v0;
@@ -230,7 +230,7 @@ new p5(d , "hihat");
 var e = function(p){
 var fr = 10; 
 var sp = 120;
-var ep = 380;
+var ep = 400;
 var v0 = 5;
 var v = v0; 
 var floortom_v = v0; 
@@ -278,7 +278,7 @@ new p5(e , "crashcymbal");
 var f = function(p){
 var fr = 10; 
 var sp = 120;
-var ep = 380;
+var ep = 400;
 var v0 = 5;
 var v = v0; 
 var a = 9.0; 
@@ -324,7 +324,7 @@ new p5(f , "tabla");
 var f = function(p){
 var fr = 10; 
 var sp = 120;
-var ep = 380;
+var ep = 400;
 var v0 = 5;
 var v = v0; 
 var a = 9.0; 
