@@ -1,5 +1,9 @@
+<!-- 
+Gaurav Agrawal
+Email id - g.agrawal2705@gmail.com
+ -->
 <!DOCTYPE html>
-<html>
+<html style="overflow:hidden;">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,18 +21,18 @@
 
 
 <body id="body">
-
-<div class="container">
-<div class="row">
-    <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "congo">
+<h3 id = "title">BeatBalls</h3>
+<div class="container" style="margin:auto ; margin-top:10px;">
+<div class="row eight-cols">
+    <div class="col-lg-1 vcenter coloumns" id = "congo">
     <div id="congoCanvas">
     	<div id = "slider1" class="sliders"></div>
     	<div>	
-    		<img class = "instruments"  src="../images/congo.jpg">
+    		<img class = "instruments"  src="../images/congo.png">
     	</div>
     </div>
     </div>
-    <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "floortom">
+    <div class="col-lg-1 vcenter coloumns" id = "floortom">
     	 <div id="floortomCanvas">
     		<div id = "slider2" class="sliders"></div>
     	<div>		
@@ -36,51 +40,51 @@
     	</div>
     </div>
     </div>
-    <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "bassdrum">
+    <div class="col-lg-1 vcenter coloumns" id = "bassdrum">
     	 <div id="bassdrumCanvas">
     		<div id = "slider3" class="sliders"></div>
     	<div>		
-    		<img class = "instruments"  src="../images/bassdrum.jpg">
+    		<img class = "instruments"  src="../images/bassdrum.png">
     	</div>
     </div>
     </div>
-     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "snare">
+     <div class="col-lg-1 vcenter coloumns" id = "snare">
     	 <div id="snareCanvas">
     		<div id = "slider4" class="sliders"></div>
     	<div>		
-    		<img class = "instruments"  src="../images/snare.jpg">
+    		<img class = "instruments"  src="../images/snare.png">
     	</div>
     </div>
     </div>
-     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "hihat">
+     <div class="col-lg-1 vcenter coloumns" id = "hihat">
     	 <div id="hihatCanvas">
     		<div id = "slider5" class="sliders"></div>
     	<div>		
-    		<img class = "instruments"  src="../images/hihat.jpg">
+    		<img class = "instruments"  src="../images/hihat.png">
     	</div>
     </div>
     </div>
-     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "crashcymbal">
+     <div class="col-lg-1 vcenter coloumns" id = "crashcymbal">
     	 <div id="crashcymbalCanvas">
     		<div id = "slider6" class="sliders"></div>
     	<div>		
-    		<img class = "instruments"  src="../images/crashcymbal.jpg">
+    		<img class = "instruments"  src="../images/crashcymbal.png">
     	</div>
     </div>
     </div>
-     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "tabla">
+     <div class="col-lg-1 vcenter coloumns" id = "tabla">
     	 <div id="tablaCanvas">
     		<div id = "slider7" class="sliders"></div>
     	<div>		
-    		<img class = "instruments"  src="../images/tabla.jpg">
+    		<img class = "instruments"  src="../images/tabla.png">
     	</div>
     </div>
     </div>
-       <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "angklung">
+       <div class="col-lg-1 vcenter coloumns" id = "angklung">
     	 <div id="angklungCanvas">
     		<div id = "slider8" class="sliders"></div>
     	<div>		
-    		<img class = "instruments"  src="../images/angklung.jpg">
+    		<img class = "instruments"  src="../images/angklung.png">
     	</div>
     </div>
     </div>
@@ -110,8 +114,55 @@ noUiSlider.create(sliders[i], {
 	}
 });
 }
+var arr = [0,0,0,0,0,0,0,0];
+var hash = window.location.hash;
+hash = hash.replace('#' , '');
+arr = hash.split(',');
+slider1.noUiSlider.set(arr[0]);
+slider2.noUiSlider.set(arr[1]);
+slider3.noUiSlider.set(arr[2]);
+slider4.noUiSlider.set(arr[3]);
+slider5.noUiSlider.set(arr[4]);
+slider6.noUiSlider.set(arr[5]);
+slider7.noUiSlider.set(arr[6]);
+slider8.noUiSlider.set(arr[7]);
+
+slider1.noUiSlider.on('change', function(){
+	arr[0] =  slider1.noUiSlider.get();
+	window.location.hash= arr;
+});
+slider2.noUiSlider.on('change', function(){
+	arr[1] =  slider2.noUiSlider.get();
+		window.location.hash= arr;
+});
+slider3.noUiSlider.on('change', function(){
+	arr[2] =  slider3.noUiSlider.get();
+		window.location.hash= arr;
+});
+slider4.noUiSlider.on('change', function(){
+	arr[3] =  slider4.noUiSlider.get();
+		window.location.hash= arr;
+});
+slider5.noUiSlider.on('change', function(){
+	arr[4] =  slider5.noUiSlider.get();
+		window.location.hash= arr;
+});
+slider6.noUiSlider.on('change', function(){
+	arr[5] =  slider6.noUiSlider.get();
+		window.location.hash= arr;
+});
+slider7.noUiSlider.on('change', function(){
+	arr[6] =  slider7.noUiSlider.get();
+		window.location.hash= arr;
+});
+slider8.noUiSlider.on('change', function(){
+	arr[7] =  slider8.noUiSlider.get();
+		window.location.hash= arr;
 
 });
+})	;
+
+console.log("I know You will open it ! - Gaurav ")
 
 </script>
 

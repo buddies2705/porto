@@ -3,12 +3,14 @@
 	max-width: 50px;
 	bottom: 40px;
 	position: absolute;
+	margin-left: 30px;
 }
 
 
 .sliders{
 	height: 100px;
 	top: 40px;
+	margin:auto;
 }	
 
 
@@ -17,9 +19,52 @@
     display: inline-block;
     vertical-align: middle;
     float: none;
+    background-color: #d3d3d3;
+    border-radius: 20px;
 }
 
 .coloumns{
 	height:600px;
 	border:1px solid #000;
+}
+
+@media (min-width: 768px){
+  .eight-cols .col-md-1,
+  .eight-cols .col-sm-1,
+  .eight-cols .col-lg-1  {
+    width: 100%;
+    *width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .eight-cols .col-md-1,
+  .eight-cols .col-sm-1,
+  .eight-cols .col-lg-1 {
+    width: 12%;
+    *width: 12%;
+  }
+}
+
+/**
+ *  The following is not really needed in this case
+ *  Only to demonstrate the usage of @media for large screens
+ */    
+@media (min-width: 1200px) {
+  .eight-cols .col-md-1,
+  .eight-cols .col-sm-1,
+  .eight-cols .col-lg-1 {
+    width: 12%;
+    *width: 12%;
+  }
+}
+
+body {
+	background-color: grey;
+}
+
+#title{
+	text-align: center;
+	color: white;
+	  font-weight: bold;
 }

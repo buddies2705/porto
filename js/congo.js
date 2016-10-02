@@ -14,7 +14,7 @@ p.preload = function() {
 
 p.setup =function () {
 
- var myCanvas = p.createCanvas(50, 600);
+ var myCanvas = p.createCanvas(100, 600);
   myCanvas.parent("congo");
 
     p.frameRate(fr); 
@@ -37,7 +37,7 @@ v = x.slider1.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);
-	p.ellipse(10,sp,10,10);
+	p.ellipse(50,sp,10,10);
 };
 }
 new p5(c,"congo");
@@ -80,7 +80,7 @@ v = x.slider2.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);
-	p.ellipse(20,sp,10,10);
+	p.ellipse(55,sp,10,10);
 };
 }
 
@@ -126,7 +126,7 @@ v = x.slider3.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);
-	p.ellipse(20,sp,10,10);
+	p.ellipse(55,sp,10,10);
 };
 }
 
@@ -172,7 +172,7 @@ v = x.slider4.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);
-	p.ellipse(20,sp,10,10);
+	p.ellipse(55,sp,10,10);
 };
 }
 
@@ -219,7 +219,7 @@ v = x.slider5.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);	
-	p.ellipse(20,sp,10,10);
+	p.ellipse(55,sp,10,10);
 };
 }
 
@@ -266,7 +266,7 @@ v = x.slider6.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);	
-	p.ellipse(20,sp,10,10);
+	p.ellipse(55,sp,10,10);
 };
 }
 
@@ -313,7 +313,7 @@ v = x.slider7.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);	
-	p.ellipse(20,sp,10,10);
+	p.ellipse(55,sp,10,10);
 };
 }
 
@@ -359,7 +359,7 @@ v = x.slider8.noUiSlider.get()/2 ;
 	p.clear();
 	var c = p.color(100, 0, 0);
 	p.fill(c);	
-	p.ellipse(20,sp,10,10);
+	p.ellipse(55,sp,10,10);
 };
 }
 
