@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Beat Big Ballzzzz</title>
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/beatballs.css">
+		<link rel="stylesheet" type="text/css" href="../css/nouislider.min.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="../css/nouislider.pip.css">
+	<link rel="stylesheet" type="text/css" href="../css/nouislider.tooltips.css"> -->
+
+</head>
+
+
+
+<body id="body">
+
+<div class="container">
+<div class="row">
+    <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "congo">
+    <div id="congoCanvas">
+    	<div id = "slider1" class="sliders"></div>
+    	<div>	
+    		<img class = "instruments"  src="../images/congo.jpg">
+    	</div>
+    </div>
+    </div>
+    <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "floortom">
+    	 <div id="floortomCanvas">
+    		<div id = "slider2" class="sliders"></div>
+    	<div>		
+    		<img class = "instruments"  src="../images/floortom.png">
+    	</div>
+    </div>
+    </div>
+    <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "bassdrum">
+    	 <div id="bassdrumCanvas">
+    		<div id = "slider3" class="sliders"></div>
+    	<div>		
+    		<img class = "instruments"  src="../images/bassdrum.jpg">
+    	</div>
+    </div>
+    </div>
+     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "snare">
+    	 <div id="snareCanvas">
+    		<div id = "slider4" class="sliders"></div>
+    	<div>		
+    		<img class = "instruments"  src="../images/snare.jpg">
+    	</div>
+    </div>
+    </div>
+     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "hihat">
+    	 <div id="hihatCanvas">
+    		<div id = "slider5" class="sliders"></div>
+    	<div>		
+    		<img class = "instruments"  src="../images/hihat.jpg">
+    	</div>
+    </div>
+    </div>
+     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "crashcymbal">
+    	 <div id="crashcymbalCanvas">
+    		<div id = "slider6" class="sliders"></div>
+    	<div>		
+    		<img class = "instruments"  src="../images/crashcymbal.jpg">
+    	</div>
+    </div>
+    </div>
+     <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "tabla">
+    	 <div id="tablaCanvas">
+    		<div id = "slider7" class="sliders"></div>
+    	<div>		
+    		<img class = "instruments"  src="../images/tabla.jpg">
+    	</div>
+    </div>
+    </div>
+       <div class="col-xs-5 col-md-3 col-lg-1 vcenter coloumns" id = "angklung">
+    	 <div id="angklungCanvas">
+    		<div id = "slider8" class="sliders"></div>
+    	<div>		
+    		<img class = "instruments"  src="../images/angklung.jpg">
+    	</div>
+    </div>
+    </div>
+    </div>
+</div> 	
+ </div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/p5.min.js"></script>
+<script src="../js/congo.js"></script>
+<script src="../js/p5.sound.min.js"></script>
+<script src="../js/nouislider.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+var sliders = document.getElementsByClassName('sliders');
+for ( var i = 0; i < sliders.length; i++ ) {
+noUiSlider.create(sliders[i], {
+	start: 1,
+	orientation: 'vertical',
+			connect: 'lower',
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+}
+
+});
+
+</script>
+
+
+</body>
+</html>

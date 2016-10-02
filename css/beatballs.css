@@ -1,0 +1,25 @@
+.instruments{
+	max-height: 60px;
+	max-width: 50px;
+	bottom: 40px;
+	position: absolute;
+}
+
+
+.sliders{
+	height: 100px;
+	top: 40px;
+}	
+
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.coloumns{
+	height:600px;
+	border:1px solid #000;
+}
