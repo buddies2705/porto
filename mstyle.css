@@ -92,3 +92,9 @@ font-family: 'Ubuntu Condensed', sans-serif;
     top:5px;
     left: 70px;
 }
+
+#beatballs{
+   position: absolute;
+    top:5px;
+    left: 120px;
+}
