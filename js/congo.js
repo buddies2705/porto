@@ -5,7 +5,7 @@ var sp = 120;
 var ep = 390; // end point
 var v0 = 5;
 var v = v0; //congo velocity
-var a = 9.0; // acceleration
+var a = 12.0; // acceleration
 var sound ;             // 
 
 p.preload = function() {
