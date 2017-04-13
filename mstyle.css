@@ -98,3 +98,9 @@ font-family: 'Ubuntu Condensed', sans-serif;
     top:5px;
     left: 120px;
 }
+
+#movie{
+   position: absolute;
+    top:5px;
+    left: 160px;
+}
