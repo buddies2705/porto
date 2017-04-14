@@ -1,4 +1,4 @@
-.iframecss{
+/*.iframecss{
 height:94%;
 width: 420px;
 overflow: hidden;
@@ -9,12 +9,10 @@ margin-left: 33%;
 margin-top:2%;
 margin-bottom:2%; 
 border-radius: 10px; 
-}
+}*/
 
 .bg{
 overflow: hidden;
-height: 100%;
-width: 100%;
 }
 
 
@@ -23,7 +21,32 @@ width: 100%;
 }
 
 
-.image-shadow{
-	 -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
+
+@media (min-width: 420px) {
+    .iframecss {
+        height:94%;
+width: 420px;
+overflow: hidden;
+position:absolute;
+left:0px;top:0px;
+font-size: 32px;
+margin-left: 33%;
+margin-top:2%;
+margin-bottom:2%; 
+border-radius: 10px; 
+    }
+}
+
+@media (max-width: 420px) {
+    .iframecss {
+        height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    font-size: 32px;
+    right: 0px; 
+    }
 }
