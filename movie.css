@@ -35,6 +35,9 @@ margin-top:2%;
 margin-bottom:2%; 
 border-radius: 10px; 
     }
+    .bg{
+    	display: none;
+    }
 }
 
 @media (max-width: 420px) {
