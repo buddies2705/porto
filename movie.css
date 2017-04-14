@@ -35,9 +35,7 @@ margin-top:2%;
 margin-bottom:2%; 
 border-radius: 10px; 
     }
-    .bg{
-    	display: none;
-    }
+
 }
 
 @media (max-width: 420px) {
@@ -51,5 +49,8 @@ border-radius: 10px;
     bottom: 0px;
     font-size: 32px;
     right: 0px; 
+    }
+    .bg{
+    	display: none;
     }
 }
