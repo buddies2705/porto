@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no">
+  <title>Howler.js Radio</title>
+  <link rel="stylesheet" href="../css/howler.css">
+</head>
+<body>
+  <!-- Stations -->
+    <button onclick="testing()"> click</button>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+  <!-- <script src="./radio.js"></script> -->
+ <script>
+ var sound = new Howl({
+    src: 'http://prclive1.listenon.in:9960/?fbclid=IwAR1bAO9Hf-yvOGrjKVVdYt0XXnqo85o1G2IXWrzVtjIujOit5JqW7oQUtfI',
+    html5: true, // A live stream can only be played through HTML5 Audio.
+    format: ['mp3', 'aac']
+});
+  
+  function testing(){
+    sound.play();
+  }
+ 
+
+
+ </script>
+</body>
+</html>
+

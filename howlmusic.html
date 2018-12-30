@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no">
+  <title>Howler.js Radio</title>
+  <link rel="stylesheet" href="../css/howler.css">
+</head>
+<body>
+  <!-- Stations -->
+  <div class="title" style="text-align: center;color: aquamarine;"> Gaurav.fm </div>
+  <div class="padding"></div>
+  <div id="station0" class="station">
+    <div class="title">
+      <div id="title0" class="subtitle"></div>
+      <div id="live0" class="live">LIVE</div>
+      <div id="playing0" class="playing">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <div id="station1" class="station">
+    <div class="title">
+      <div id="title1" class="subtitle"></div>
+      <div id="live1" class="live">LIVE</div>
+      <div id="playing1" class="playing">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <div id="station2" class="station">
+    <div class="title">
+      <div id="title2" class="subtitle"></div>
+      <div id="live2" class="live">LIVE</div>
+      <div id="playing2" class="playing">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <div id="station3" class="station">
+    <div class="title">
+      <div id="title3" class="subtitle"></div>
+      <div id="live3" class="live">LIVE</div>
+      <div id="playing3" class="playing">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <div id="station4" class="station">
+    <div class="title">
+      <div id="title4" class="subtitle"></div>
+      <div id="live4" class="live">LIVE</div>
+      <div id="playing4" class="playing">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <div class="padding"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+  <!-- <script src="./radio.js"></script> -->
+  <script>
+ var Radio = function(stations) {
+  var self = this;
+
+  self.stations = stations;
+  self.index = 0;
+  
+  // Setup the display for each station.
+  for (var i=0; i<self.stations.length; i++) {
+    window['title' + i].innerHTML = '<b>' + self.stations[i].freq + '</b> ' + self.stations[i].title;
+    window['station' + i].addEventListener('click', function(index) {
+      var isNotPlaying = (self.stations[index].howl && !self.stations[index].howl.playing());
+      
+      // Stop other sounds or the current one.
+      radio.stop();
+
+      // If the station isn't already playing or it doesn't exist, play it.
+      if (isNotPlaying || !self.stations[index].howl) {
+        radio.play(index);
+      }
+    }.bind(self, i));
+  }
+};
+
+Radio.prototype = {
+  /**
+   * Play a station with a specific index.
+   * @param  {Number} index Index in the array of stations.
+   */
+  play: function(index) {
+    var self = this;
+    var sound;
+
+    index = typeof index === 'number' ? index : self.index;
+    var data = self.stations[index];
+
+    // If we already loaded this track, use the current one.
+    // Otherwise, setup and load a new Howl.
+    if (data.howl) {
+      sound = data.howl;
+    } else {
+      sound = data.howl = new Howl({
+        src: data.src,
+        html5: true, // A live stream can only be played through HTML5 Audio.
+        format: ['mp3', 'aac']
+      });
+    }
+
+    // Begin playing the sound.
+    sound.play();
+
+    // Toggle the display.
+    self.toggleStationDisplay(index, true);
+
+    // Keep track of the index we are currently playing.
+    self.index = index;
+  },
+
+  /**
+   * Stop a station's live stream.
+   */
+  stop: function() {
+    var self = this;
+
+    // Get the Howl we want to manipulate.
+    var sound = self.stations[self.index].howl;
+
+    // Toggle the display.
+    self.toggleStationDisplay(self.index, false);
+
+    // Stop the sound.
+    if (sound) {
+      sound.stop();
+    }
+  },
+
+  /**
+   * Toggle the display of a station to off/on.
+   * @param  {Number} index Index of the station to toggle.
+   * @param  {Boolean} state true is on and false is off.
+   */
+  toggleStationDisplay: function(index, state) {
+    var self = this;
+
+    // Highlight/un-highlight the row.
+    window['station' + index].style.backgroundColor = state ? 'rgba(255, 255, 255, 0.33)' : '';
+
+    // Show/hide the "live" marker.
+    window['live' + index].style.opacity = state ? 1 : 0;
+
+    // Show/hide the "playing" animation.
+    window['playing' + index].style.display = state ? 'block' : 'none';
+  }
+};
+
+
+var radio = new Radio([
+{
+    freq: '91.1',
+    title: "Radio City",
+    src: 'http://prclive1.listenon.in:9960/',
+    howl: null
+ },  
+ {
+    freq: '81.4',
+    title: "BBC Radio 1",
+    src: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_q',
+    howl: null
+  },
+  {
+    freq: '89.9',
+    title: "Hip Hop Hits",
+    src: 'http://tunein4.streamguys1.com/hhbeafree5',
+    howl: null
+  },
+  {
+    freq: '98.3',
+    title: "Radio  Mirchi",
+    src: 'http://peridot.streamguys.com:7150/Mirchi',
+    howl: null
+  },
+  {
+    freq: '103.3',
+    title: "80's Hits",
+    src: 'http://tunein4.streamguys1.com/80shtfree1',
+    howl: null
+  }]);
+  
+  
+</script>
+</body>
+</html>
